@@ -2,6 +2,7 @@ import { useState } from 'react';
 import firebase from '../firebase';
 import { useRouter } from 'next/router';
 import Head from 'next/head'
+import Link from 'next/link'
 import styles from '../styles/signup.module.css';
 
 const Signup = () => {
@@ -61,7 +62,7 @@ const Signup = () => {
           <button type="submit" className={styles.button}>Signup</button>
           {error && <p>{error}</p>}
         </form>
-        <p>Already have an account? <a href="/login">Login</a></p> {/* Link to login page */}
+       <p>Already have an account? <Link href="/login">Login</Link></p>
       </div>
     </div>
   );
